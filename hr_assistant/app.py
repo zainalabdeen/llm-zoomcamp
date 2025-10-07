@@ -31,12 +31,12 @@ with tab1:
         with st.expander("🧾 Enter Employee Information" if language == "English" else "🧾 أدخل بيانات الموظف"):
             name = st.text_input("Name" if language == "English" else "الاسم")
             job = st.text_input("Job Title" if language == "English" else "المسمى الوظيفي")
-            age = st.number_input("Age", 18, 70, 30)
-            service_years = st.number_input("Service Years", 0, 40, 5)
-            annual_leave_days = st.number_input("Annual Leave Requested", 0, 60, 21)
-            sick_leave_days = st.number_input("Sick Leave Requested", 0, 60, 0)
-            basic_wage = st.number_input("Basic Wage", 0, 100000, 5000)
-            total_salary = st.number_input("Total Salary", 0, 100000, 7000)
+            age = st.number_input("Age" if language == "English" else "العمر", 18, 70, 30)
+            service_years = st.number_input("Service Years" if language == "English" else "سنوات الخدمة", 0, 40, 5)
+            annual_leave_days = st.number_input("Annual Leave Requested" if language == "English" else "رصيد الإجازة الحالي", 0, 60, 21)
+            sick_leave_days = st.number_input("Sick Leave Requested" if language == "English" else "أيام الإجازة المرضية", 0, 60, 0)
+            basic_wage = st.number_input("Basic Wage" if language == "English" else "الراتب الأساسي", 0, 100000, 5000)
+            total_salary = st.number_input("Total Salary" if language == "English" else "إجمالي الراتب", 0, 100000, 7000)
 
             employee_data = {
                 "name": name,

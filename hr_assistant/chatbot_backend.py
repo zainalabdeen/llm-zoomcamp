@@ -89,8 +89,8 @@ def answer_policy_question(query: str, employee_data: dict | None = None):
             f"Job: {employee_data['job']}\n"
             f"Age: {employee_data['age']}\n"
             f"Service Years: {employee_data['service_years']}\n"
-            f"Annual Leave: {employee_data['annual_leave_days']}\n"
-            f"Sick Leave: {employee_data['sick_leave_days']}\n"
+            f"Annual Leave Balance: {employee_data['annual_leave_days']}\n"
+            f"Sick Leave Days: {employee_data['sick_leave_days']}\n"
             f"Basic Wage: {employee_data['basic_wage']}\n"
             f"Total Salary: {employee_data['total_salary']}\n"
         )
