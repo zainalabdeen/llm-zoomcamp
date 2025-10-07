@@ -1,0 +1,13 @@
+llama-index
+llama-index-embeddings-huggingface
+llama-index-vector-stores-qdrant
+fitz
+pymupdf==1.23.8
+transformers
+transformers[sentencepiece]
+sentencepiece
+transformers==4.37.2 sentencepiece protobuf==3.20.*
+streamlit
+openai
+llama-index
+qdrant-client
