@@ -224,7 +224,7 @@ Each answer includes the relevant Part → Chapter → Article, with expandable 
 ```
 hr_law_bot/
 │
-├── data/
+├── data/labor_law
 │   ├── labor_law_ar.pdf      
 │   ├── labor_law_parsed.json  # extracted articles 
 │
@@ -232,6 +232,8 @@ hr_law_bot/
 ├── process_data_vectors.py    # Store to Vector DB
 ├── chatbot_backend.py         # Backend logic (retrieval + reasoning)
 ├── app.py                     # Streamlit frontend
+├── evaluation_data.py         # Generate QA from articles (using LLM)
+├── rag_evaluation.py          # Evalute Qdrant Result
 ├── requirements.txt
 └── README.md
 ```
