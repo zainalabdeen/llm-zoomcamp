@@ -2,7 +2,7 @@
 ### **An intelligent, bilingual HR assistant powered by AI and vector search**
 
 <p align="center">
-  <img src="assets/screenshots/1.png" width="50%">
+  <img src="assets/screenshots/2.png" width="50%">
   <img src="assets/screenshots/6.png" width="50%">
 </p>
 
