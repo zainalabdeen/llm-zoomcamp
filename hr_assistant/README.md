@@ -2,7 +2,8 @@
 ### **An intelligent, bilingual HR assistant powered by AI and vector search**
 
 <p align="center">
-  <img src="assets/screenshots/chat_example.png" width="85%">
+  <img src="assets/screenshots/1.png" width="50%">
+  <img src="assets/screenshots/6.png" width="50%">
 </p>
 
 > ⚡️ *Ask questions, get answers, and understand Saudi labor law — instantly and bilingually.*
@@ -146,6 +147,17 @@ The retrieved text is passed to **OpenAI GPT-4o-mini**, which:
 
 ---
 
+## 📊 Evaluation
+
+**Retrieval Evaluation:** ([search_evaluation.ipynb](search_evaluation.ipynb))
+**Semantic Search vs Hybrid Search:**
+
+<img src="assets/screenshots/1.png" width="400">
+
+Based on a generated ground truth dataset of 1245  questions,i applied multi metrics to evalute the semantic search and hybrid search, hybrid search demonstrated superior performance and was chosen as the preferred method.
+
+
+
 ## 🧑‍💼 Employee Data Integration
 
 One of the project’s most powerful features 💪
@@ -201,21 +213,21 @@ Below are screenshots from the Streamlit interface showcasing the key features o
 ### 💬 Chat Interface
 Ask questions in Arabic or English — the assistant detects the language automatically and answers in the same language.
 
-![Chat Interface](assets/screenshots/chat_example.png)
+![Chat Interface](assets/screenshots/4.png)
 
 ---
 
 ### 👤 Employee Data Form
 Users can optionally enter employee details to analyze eligibility for benefits such as annual or sick leave.
 
-![Employee Form](assets/screenshots/employee_form.png)
+![Employee Form](assets/screenshots/8.png)
 
 ---
 
 ### 📖 Legal Article References
 Each answer includes the relevant Part → Chapter → Article, with expandable sections to view the original Arabic text and its English translation.
 
-![Article References](assets/screenshots/article_reference.png)
+![Article References](assets/screenshots/9.png)
 
 ---
 
@@ -233,7 +245,7 @@ hr_law_bot/
 ├── chatbot_backend.py         # Backend logic (retrieval + reasoning)
 ├── app.py                     # Streamlit frontend
 ├── evaluation_data.py         # Generate QA from articles (using LLM)
-├── rag_evaluation.py          # Evalute Qdrant Result
+├── search_evaluation.py       # Evalute Semantic Search vs Hybrid Search
 ├── requirements.txt
 └── README.md
 ```
