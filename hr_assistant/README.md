@@ -156,6 +156,19 @@ The retrieved text is passed to **OpenAI GPT-4o-mini**, which:
 
 Based on a generated ground truth dataset of 1245  questions,i applied multi metrics to evalute the semantic search and hybrid search, hybrid search demonstrated superior performance and was chosen as the preferred method.
 
+**RAG Evaluation:** ([rag_evaluation.ipynb](rag_evaluation.ipynb))
+1. LLM generated 1245 questions based on extraxted articals.
+2. RAG function generated answers.
+3. Question were sent to Two small LLM models evaluated: `gpt-4o-mini`, `gpt-3.5-turbo`.(Cosine similarity).
+4. Two  small LLM models evaluated: `gpt-4o-mini`, `gpt-3.5-turbo` by Cosine similarity of generated Answer and Original Answer.
+
+**Compare Graph**
+
+<img src="assets/screenshots/10.png" width="400">
+
+
+Relevance results were show as the `gpt-4o-mini` is better so we selected it as the default model.
+
 
 
 ## 🧑‍💼 Employee Data Integration
@@ -196,13 +209,13 @@ A clean bilingual web UI was built using **Streamlit**.
 ### Technologies:
 | Component | Technology |
 |------------|-------------|
-| Framework | Streamlit |
+| Frontend | Streamlit |
 | LLM | GPT-4o-mini |
-| Embedding | intfloat/multilingual-e5-base |
-| Database | Qdrant |
-| Indexing | LlamaIndex |
+| Embeddings | intfloat/multilingual-e5-base |
+| Vector DB | Qdrant |
+| Retrieval	 | LlamaIndex |
 | Translation | Helsinki-NLP/opus-mt-ar-en |
-| Text Extraction | PyMuPDF (fitz) |
+| Parsing	 | PyMuPDF (fitz) |
 
 ---
 
