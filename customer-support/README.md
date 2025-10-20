@@ -7,9 +7,6 @@
 [![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)]()
 [![Deployable](https://img.shields.io/badge/Cloud-Deployable-lightgrey.svg)]()
 
-**Author:** ZainAlabdeen  
-**Repo:** [customer-support-rag](https://github.com/zainalabdeen/llm-zoomcamp/customer-support)
-
 ---
 
 ## 🧠 Problem Description
@@ -21,7 +18,6 @@ Modern customer support teams are overwhelmed with repetitive FAQ queries, scatt
 - Generates improved answers using an LLM.
 - Collects feedback and evaluates retrieval and generation quality.
 
-✅ **[2 points: Problem well-described]**
 
 ---
 
@@ -48,7 +44,6 @@ Data Ingestion → Embedding → Qdrant Vector DB
 
 ## 📥 1. Data Ingestion
 
-✅ **[2 points: Automated ingestion pipeline]**  
 We load and clean the MakTek FAQ dataset, deduplicate questions, convert them into `Document` objects, and index them automatically into Qdrant.
 
 📁 Code: [`data_ingestion.py`](./data_ingestion.py)
@@ -69,7 +64,6 @@ Documents are converted into dense vectors and stored with metadata for efficien
 
 ## 🔎 3. Retrieval Pipeline
 
-✅ **[2 points: Knowledge base + LLM used]**  
 
 | Stage | Method | Purpose |
 |-------|--------|---------|
@@ -94,7 +88,6 @@ Documents are converted into dense vectors and stored with metadata for efficien
 
 ## 🖥️ 5. User Interface
 
-✅ **[2 points: UI built with Streamlit]**  
 
 - **User App:** Semantic search interface with optional LLM answers  
 - **Admin Dashboard:** Feedback analytics + retrieval evaluation visualizations  
@@ -112,7 +105,6 @@ Documents are converted into dense vectors and stored with metadata for efficien
 
 ### 📊 Retrieval Evaluation
 
-✅ **[2 points: Multiple retrieval methods evaluated]**  
 
 We compare:
 
@@ -122,18 +114,17 @@ We compare:
 
 Metrics: **Hit Rate@5**, **MRR@5**
 
-📁 Code: [`evaluate_retrieval.py`](./evaluate_retrieval.py)  
+📁 Code: [`search_evaluation.ipynb`](./notebook/search_evaluation.ipynb)  
 🖼️ ![Retrieval Evaluation](./images/search_evaluation.png)
 
 ---
 
 ### 🤖 LLM Evaluation
 
-✅ **[2 points: Multiple approaches evaluated]**  
 
 We evaluate `gpt-4o-mini` and `gpt-3.5-turbo` answers vs. ground truth using cosine similarity.
 
-📁 Code: [`evaluate_llm.py`](./evaluate_llm.py)  
+📁 Code: [`llm_evaluation.ipynb`](./notebook/llm_evaluation.ipynb)  
 🖼️ ![LLM Evaluation](./images/rag_evaluation.png)
 🖼️ ![LLM Evaluation](./images/rag_evaluation2.png)
 
@@ -141,7 +132,6 @@ We evaluate `gpt-4o-mini` and `gpt-3.5-turbo` answers vs. ground truth using cos
 
 ## 📊 7. Monitoring & Feedback
 
-✅ **[2 points: Feedback + Dashboard with 5+ charts]**  
 
 - Collect user feedback (text + rating)
 - Store it in PostgreSQL
@@ -153,7 +143,6 @@ We evaluate `gpt-4o-mini` and `gpt-3.5-turbo` answers vs. ground truth using cos
 
 ## 🐳 8. Containerization
 
-✅ **[2 points: Full docker-compose deployment]**  
 
 - Qdrant + PostgreSQL + RAG App in one command
 - Reproducible and cloud-ready
