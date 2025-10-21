@@ -117,6 +117,8 @@ Metrics: **Hit Rate@5**, **MRR@5**
 📁 Code: [`search_evaluation.ipynb`](./notebook/search_evaluation.ipynb)  
 🖼️ ![Retrieval Evaluation](./images/search_evaluation.png)
 
+Based on a generated ground truth dataset of questions,i applied multi metrics to evalute the Dense Vector Search,Hybrid Search and Hybrid + Reranker.
+Hybrid + Reranker demonstrated superior performance and was chosen as the preferred method.
 ---
 
 ### 🤖 LLM Evaluation
@@ -128,6 +130,7 @@ We evaluate `gpt-4o-mini` and `gpt-3.5-turbo` answers vs. ground truth using cos
 🖼️ ![LLM Evaluation](./images/rag_evaluation.png)
 🖼️ ![LLM Evaluation](./images/rag_evaluation2.png)
 
+Relevance results were show as the gpt-3.5-turbo is better so we selected it as the default model.
 ---
 
 ## 📊 7. Monitoring & Feedback

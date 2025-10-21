@@ -89,7 +89,7 @@ def query_without_llm(index: VectorStoreIndex,bm25: BM25Okapi, corpus: Dict[str,
 # --------------------------
 # Query (With LLM)
 # --------------------------
-def query_with_llm(query: str , vector_result:List[Dict] ,model : str ="gpt-4o-mini") -> Dict:
+def query_with_llm(query: str , vector_result:List[Dict] ,model : str ="gpt-3.5-turbo") -> Dict:
     if not os.getenv("OPENAI_API_KEY"):
         raise RuntimeError("OPENAI_API_KEY is not set.")
     context_text = "\n\n".join([f"[{i+1}] Q: {r['question']}\nA: {r['answer']}" for i, r in enumerate(vector_result)])
@@ -119,7 +119,7 @@ def prepare_search(data_path : str = "data/data.csv") -> Dict:
     result = prepare_hybird_search(data_path)
     return result
 
-def do_search(query: str , prepare_dict : Dict, model : str ="gpt-4o-mini") -> Dict:
+def do_search(query: str , prepare_dict : Dict, model : str ="gpt-3.5-turbo") -> Dict:
     vector_result = query_without_llm(prepare_dict['index'],prepare_dict['bm25'],prepare_dict['corpus_items'], query)
     result = query_with_llm(query,vector_result,model)
     return result
